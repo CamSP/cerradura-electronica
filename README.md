@@ -9,6 +9,9 @@
 * Comunicación con base de datos remota a través de WiFi.
 * Comunicación con dispositivos a través de bluetooth
 * El dispositivo incluye el conversor de 120v/220v a 5v dentro de la caja.
+* La lectura de huella dactilar y el reconocimiento facial puede realizarse por medio de la aplicación movil.
+
+![alt text](./Diagrama de bloques.png)
 
 ## Requerimientos no funcionales
 * El sistema no sustituye la cerradura mecánica, es un complemento.
