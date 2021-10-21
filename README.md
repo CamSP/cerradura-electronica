@@ -28,4 +28,5 @@
 * El sistema puede repararse rapidamente cambiando uno de los modulos, ademas el daño en uno de los modulos no inhabilita el sistema.
 * La caja del producto debe ser resistente a golpes.
 * El sistema no podrá ser desmontado desde la parte exterior de la puerta.
+* 
 
