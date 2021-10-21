@@ -11,7 +11,7 @@
 * El dispositivo incluye el conversor de 120v/220v a 5v dentro de la caja.
 * La lectura de huella dactilar y el reconocimiento facial puede realizarse por medio de la aplicación movil.
 
-![alt text](/Diagrama de bloques.png)
+![alt text](/diagrama_de_bloques.png)
 
 ## Requerimientos no funcionales
 * El sistema no sustituye la cerradura mecánica, es un complemento.
