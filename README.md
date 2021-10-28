@@ -1,10 +1,18 @@
 # Cerradura electrónica
 
+## Descripción del producto
+El producto consiste en una cerradura adaptable que puede ser activada mediante una variedad de opciones conectadas a una base de datos que permite la configuración de usuarios con sus respectivos permisos modificables. Entre las opciones mencionadas anteriormente se encuentran:
+
+* Reconocimiento facial
+* Huella dactilar
+* Sistema RFID por tarjeta
+
+El sistema implementará la huella dactilar y el RFID en la carcasa de la cerradura. Para el reconocimiento facial se hará uso de una aplicación con el fin de simplificar los requerimientos de hardware del producto. Adicionalmente, en la aplicación se administrará la cerradura, lo que incluye los usuarios registrados y huellas registradas en esta, adicionalmente, se puede configurar la cerradura para tener una unica o una doble autentificación en caso de que se necesiten mayores restricciones para el manejo de esta.
+El elemento diferencial de nuestro producto a los demás sistemas que se encuentran en el mercado es que nuestra cerradura ofrece una experiencia personal al hacer uso de varios sistemas biometricos y una aplicación que permiten al usuario interactuar de manera directa con la cerradura. Adicionalemnte, nuestro producto incluye más perifericos que las que se encuentran en el mercado, esto causa una diversificación en el uso del sistema. 
 
 ## Requerimientos funcionales
 * Uso de electroiman para controlar la apertura de la puerta.
 * Reconocimiento facial desde el telefono como alternativa para abrir o cerrar la cerradura.
-* Teclado integrado para el uso de código de apertura.
 * Reconocimiento de huellas dactilares.
 * Comunicación con base de datos remota a través de WiFi.
 * Comunicación con dispositivos a través de bluetooth
