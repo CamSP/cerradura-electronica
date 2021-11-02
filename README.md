@@ -21,7 +21,7 @@ El elemento diferencial de nuestro producto a los demás sistemas que se encuent
 * En caso de que haya un corte en la energía, el sistema seguiŕa funcionando con baterias.
 
 ![alt text](/diagrama_de_bloques.png)
-![alt text](/diagrama_de_bloques:comunicaciones.png)
+![alt text](/diagrama_de_bloques_comunicaciones.png)
 
 ## Requerimientos no funcionales
 * Debido al uso de la cerradura electrónica, la cerradura mecánica convencional no es necesaria, sin embargo, en caso de que el cliente lo desee, se pueden usar ambas en conjunto.
