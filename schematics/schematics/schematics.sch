@@ -85,12 +85,6 @@ F1 "Cerradura.sch" 50
 F2 "12v" I L 5000 5000 50 
 F3 "CERRADURA" I L 5000 4850 50 
 $EndSheet
-$Sheet
-S 2850 3400 650  800 
-U 618F1C26
-F0 "Potencia" 50
-F1 "Potencia.sch" 50
-$EndSheet
 Wire Wire Line
 	5800 4250 5900 4250
 Wire Wire Line
@@ -151,8 +145,6 @@ Wire Wire Line
 	5000 3450 4850 3450
 Wire Wire Line
 	4850 2200 5000 2200
-Wire Wire Line
-	4850 3450 4850 2200
 Wire Wire Line
 	6500 3850 6450 3850
 Connection ~ 4850 2200
@@ -224,4 +216,33 @@ Wire Wire Line
 	4800 3550 4800 2650
 Wire Wire Line
 	4450 2650 4800 2650
+Wire Wire Line
+	3650 3050 3100 3050
+Wire Wire Line
+	3100 3050 3100 2200
+Wire Wire Line
+	3100 2200 4850 2200
+Wire Wire Line
+	4850 2200 4850 3450
+$Sheet
+S 2950 3750 550  300 
+U 618F1C26
+F0 "Potencia" 50
+F1 "Potencia.sch" 50
+F2 "3v3" I R 3500 3850 50 
+F3 "12v" I R 3500 3950 50 
+$EndSheet
+Wire Wire Line
+	3650 3050 3650 3850
+Wire Wire Line
+	3500 3850 3650 3850
+Wire Wire Line
+	3650 3850 4000 3850
+Connection ~ 3650 3850
+Wire Wire Line
+	3500 3950 3700 3950
+Wire Wire Line
+	3700 3950 3700 5000
+Wire Wire Line
+	3700 5000 5000 5000
 $EndSCHEMATC
