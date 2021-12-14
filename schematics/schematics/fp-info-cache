@@ -1,11 +1,4 @@
-16925933413314501
-1N4004
-DIOAD520W79L463D238
-
-
-0
-2
-2
+16930854472838373
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -46094,6 +46087,13 @@ One digit LED 7 segment SA39-11 SC39-11 SA39-12 SC39-12
 0
 10
 10
+ESP32-WROVER-I
+XCVR_ESP32-WROVER-I
+
+
+0
+39
+39
 Ferrite_THT
 LairdTech_28C0236-0JW-10
 Ferrite, vertical, LairdTech 28C0236-0JW-10, https://assets.lairdtech.com/home/brandworld/files/28C0236-0JW-10.pdf, JW Miller core https://www.bourns.com/products/magnetic-products/j.w.-miller-through-hole-ferrite-beads-emi-filters
@@ -65981,6 +65981,13 @@ Potentiometer vertical Vishay T73YP
 0
 3
 3
+RC522
+RC522
+
+
+0
+8
+8
 RF
 Skyworks_SKY13575_639LF
 http://www.skyworksinc.com/uploads/documents/SKY13575_639LF_203270D.pdf
@@ -75267,6 +75274,20 @@ Varistor
 RV_Disc_D21.5mm_W11.4mm_P10mm
 Varistor, diameter 21.5mm, width 11.4mm, pitch 10mm
 varistor SIOV
+0
+2
+2
+inductor
+IND_DFEH12060D-220M=P3
+
+
+0
+2
+2
+inductor
+IND_RLS-226-R
+
+
 0
 2
 2

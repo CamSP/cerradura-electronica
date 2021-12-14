@@ -103,10 +103,10 @@ Wire Wire Line
 	4750 4200 4750 3950
 Connection ~ 4400 4200
 $Comp
-L Connector_Generic:Conn_01x02 J1
+L Connector_Generic:Conn_01x02 Cerradura1
 U 1 1 61954441
 P 4950 3850
-F 0 "J1" H 5030 3842 50  0000 L CNN
+F 0 "Cerradura1" H 5030 3842 50  0000 L CNN
 F 1 "Conn_01x02" H 5030 3751 50  0000 L CNN
 F 2 "Connector_JST:JST_EH_B2B-EH-A_1x02_P2.50mm_Vertical" H 4950 3850 50  0001 C CNN
 F 3 "~" H 4950 3850 50  0001 C CNN

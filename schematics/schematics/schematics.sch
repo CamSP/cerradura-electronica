@@ -172,10 +172,10 @@ F 3 "~" H 4250 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 J2
+L Connector_Generic:Conn_01x03 PRGMER1
 U 1 1 619D36FF
 P 3350 2750
-F 0 "J2" H 3268 2425 50  0000 C CNN
+F 0 "PRGMER1" H 3268 2425 50  0000 C CNN
 F 1 "Conn_01x03" H 3268 2516 50  0000 C CNN
 F 2 "Connector_PinHeader_2.00mm:PinHeader_1x03_P2.00mm_Vertical" H 3350 2750 50  0001 C CNN
 F 3 "~" H 3350 2750 50  0001 C CNN
@@ -245,4 +245,48 @@ Wire Wire Line
 	3700 3950 3700 5000
 Wire Wire Line
 	3700 5000 5000 5000
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 61B467BB
+P 3000 5100
+F 0 "H1" H 3100 5146 50  0000 L CNN
+F 1 "MountingHole" H 3100 5055 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 3000 5100 50  0001 C CNN
+F 3 "~" H 3000 5100 50  0001 C CNN
+	1    3000 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 61B47007
+P 3000 5300
+F 0 "H2" H 3100 5346 50  0000 L CNN
+F 1 "MountingHole" H 3100 5255 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 3000 5300 50  0001 C CNN
+F 3 "~" H 3000 5300 50  0001 C CNN
+	1    3000 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 61B48122
+P 3000 5500
+F 0 "H3" H 3100 5546 50  0000 L CNN
+F 1 "MountingHole" H 3100 5455 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 3000 5500 50  0001 C CNN
+F 3 "~" H 3000 5500 50  0001 C CNN
+	1    3000 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 61B4930B
+P 3000 5700
+F 0 "H4" H 3100 5746 50  0000 L CNN
+F 1 "MountingHole" H 3100 5655 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 3000 5700 50  0001 C CNN
+F 3 "~" H 3000 5700 50  0001 C CNN
+	1    3000 5700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
