@@ -61,4 +61,37 @@ El elemento diferencial de nuestro producto a los demás sistemas que se encuent
 * El circuito consiste del controlador ESP32, sus protección, indicadores y conexiones a los otros perifericos, como el lector de huella.
 * El diseño del circuito fue pensado para hacerse de forma modular con la cerradura y sus perifericos.
 
-## Diseño PCB
+## Diseño del circuito
+
+### ESP32
+
+
+### Etapa de potencia
+* modulo ams1117
+Regulador lineal de alta eficiencia. Dispositivo de voltaje fijo para usarlo a 3.3v con corriente maxima de 1 amperio, temperatura de trabajo de -40 150, con voltaja entrada 4.75 para una salida de 3.3. Y Perdidas de voltaje debidas al calor.
+Para una entrada de voltaje entre 4.8 y 12 V en este ams1117-3.3 se consigue 3.3 V en la salida, utilizando los capacitores recomendados por el fabricante.
+* modulo mt3608
+El mt3608 trabaja de 2V a 24V en la entrada, dispositivo de voltaje de salida variable. Además de una eficiencia del 97 %. El fabricante da un circuito para aplicación basica. Este trabaja a una frecuencia fija. Para las resistencias, se utiliza la siguiente relación deacuerdo con el voltaje de entrada.
+Vout=Vref*(1+R1/R2). 
+Para el inductor es recomendable utilizar uno de 4.7uH a 22uH.
+En cuanto a los capacitores, dos capacitores iguales de  alrededor de los 22uF.
+Tambien el fabricante sugiere un diodo shcottky para no interferir con la velocidad de funcionamiento del modulo mt3608.
+
+### Cerradura
+Para el circuito de la cerradura se utiliza un rele de 3v que se conencta a una de las salidas digitales del ESP32. Entre los terminales normalmente abiertos se conecta la cerradura y 12v que la alimentan, de forma que cuando el relese enciende se energiza la cerradura. Por otro lado, dado que el rele y la cerradura utilizan enbobinados para funcionar, es necesario proteger el circuito de posibles corrientes parasitas que estas generen una vez dejen de estar energizadas, de esta forma se conecta un diodo entre GND y la entrada digital que se conecta al rele, y otro diodo entre GND y la conexión entre el rele y la cerradura.
+
+### RFID
+
+
+### Sensor de huella
+
+
+### LEDS de funcionamiento
+
+
+### Programador
+
+
+### Medición de voltaje
+
+
