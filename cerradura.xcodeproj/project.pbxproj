@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBFF842F27A9D55F00F43D1D /* cerraduraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFF842E27A9D55F00F43D1D /* cerraduraApp.swift */; };
+		CBFF843127A9D55F00F43D1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFF843027A9D55F00F43D1D /* ContentView.swift */; };
+		CBFF843327A9D55F00F43D1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBFF843227A9D55F00F43D1D /* Assets.xcassets */; };
+		CBFF843627A9D55F00F43D1D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBFF843527A9D55F00F43D1D /* Preview Assets.xcassets */; };
+		CBFF844027A9D55F00F43D1D /* cerraduraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFF843F27A9D55F00F43D1D /* cerraduraTests.swift */; };
+		CBFF844A27A9D55F00F43D1D /* cerraduraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFF844927A9D55F00F43D1D /* cerraduraUITests.swift */; };
+		CBFF844C27A9D55F00F43D1D /* cerraduraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFF844B27A9D55F00F43D1D /* cerraduraUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBFF843C27A9D55F00F43D1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBFF842327A9D55F00F43D1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBFF842A27A9D55F00F43D1D;
+			remoteInfo = cerradura;
+		};
+		CBFF844627A9D55F00F43D1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBFF842327A9D55F00F43D1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBFF842A27A9D55F00F43D1D;
+			remoteInfo = cerradura;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CBFF842B27A9D55F00F43D1D /* cerradura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cerradura.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBFF842E27A9D55F00F43D1D /* cerraduraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerraduraApp.swift; sourceTree = "<group>"; };
+		CBFF843027A9D55F00F43D1D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CBFF843227A9D55F00F43D1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBFF843527A9D55F00F43D1D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CBFF843B27A9D55F00F43D1D /* cerraduraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cerraduraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBFF843F27A9D55F00F43D1D /* cerraduraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerraduraTests.swift; sourceTree = "<group>"; };
+		CBFF844527A9D55F00F43D1D /* cerraduraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cerraduraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBFF844927A9D55F00F43D1D /* cerraduraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerraduraUITests.swift; sourceTree = "<group>"; };
+		CBFF844B27A9D55F00F43D1D /* cerraduraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerraduraUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBFF842827A9D55F00F43D1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBFF843827A9D55F00F43D1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBFF844227A9D55F00F43D1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBFF842227A9D55F00F43D1D = {
+			isa = PBXGroup;
+			children = (
+				CBFF842D27A9D55F00F43D1D /* cerradura */,
+				CBFF843E27A9D55F00F43D1D /* cerraduraTests */,
+				CBFF844827A9D55F00F43D1D /* cerraduraUITests */,
+				CBFF842C27A9D55F00F43D1D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBFF842C27A9D55F00F43D1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBFF842B27A9D55F00F43D1D /* cerradura.app */,
+				CBFF843B27A9D55F00F43D1D /* cerraduraTests.xctest */,
+				CBFF844527A9D55F00F43D1D /* cerraduraUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBFF842D27A9D55F00F43D1D /* cerradura */ = {
+			isa = PBXGroup;
+			children = (
+				CBFF842E27A9D55F00F43D1D /* cerraduraApp.swift */,
+				CBFF843027A9D55F00F43D1D /* ContentView.swift */,
+				CBFF843227A9D55F00F43D1D /* Assets.xcassets */,
+				CBFF843427A9D55F00F43D1D /* Preview Content */,
+			);
+			path = cerradura;
+			sourceTree = "<group>";
+		};
+		CBFF843427A9D55F00F43D1D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CBFF843527A9D55F00F43D1D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CBFF843E27A9D55F00F43D1D /* cerraduraTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBFF843F27A9D55F00F43D1D /* cerraduraTests.swift */,
+			);
+			path = cerraduraTests;
+			sourceTree = "<group>";
+		};
+		CBFF844827A9D55F00F43D1D /* cerraduraUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CBFF844927A9D55F00F43D1D /* cerraduraUITests.swift */,
+				CBFF844B27A9D55F00F43D1D /* cerraduraUITestsLaunchTests.swift */,
+			);
+			path = cerraduraUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBFF842A27A9D55F00F43D1D /* cerradura */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBFF844F27A9D55F00F43D1D /* Build configuration list for PBXNativeTarget "cerradura" */;
+			buildPhases = (
+				CBFF842727A9D55F00F43D1D /* Sources */,
+				CBFF842827A9D55F00F43D1D /* Frameworks */,
+				CBFF842927A9D55F00F43D1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cerradura;
+			productName = cerradura;
+			productReference = CBFF842B27A9D55F00F43D1D /* cerradura.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBFF843A27A9D55F00F43D1D /* cerraduraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBFF845227A9D55F00F43D1D /* Build configuration list for PBXNativeTarget "cerraduraTests" */;
+			buildPhases = (
+				CBFF843727A9D55F00F43D1D /* Sources */,
+				CBFF843827A9D55F00F43D1D /* Frameworks */,
+				CBFF843927A9D55F00F43D1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBFF843D27A9D55F00F43D1D /* PBXTargetDependency */,
+			);
+			name = cerraduraTests;
+			productName = cerraduraTests;
+			productReference = CBFF843B27A9D55F00F43D1D /* cerraduraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CBFF844427A9D55F00F43D1D /* cerraduraUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBFF845527A9D55F00F43D1D /* Build configuration list for PBXNativeTarget "cerraduraUITests" */;
+			buildPhases = (
+				CBFF844127A9D55F00F43D1D /* Sources */,
+				CBFF844227A9D55F00F43D1D /* Frameworks */,
+				CBFF844327A9D55F00F43D1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBFF844727A9D55F00F43D1D /* PBXTargetDependency */,
+			);
+			name = cerraduraUITests;
+			productName = cerraduraUITests;
+			productReference = CBFF844527A9D55F00F43D1D /* cerraduraUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBFF842327A9D55F00F43D1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					CBFF842A27A9D55F00F43D1D = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					CBFF843A27A9D55F00F43D1D = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = CBFF842A27A9D55F00F43D1D;
+					};
+					CBFF844427A9D55F00F43D1D = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = CBFF842A27A9D55F00F43D1D;
+					};
+				};
+			};
+			buildConfigurationList = CBFF842627A9D55F00F43D1D /* Build configuration list for PBXProject "cerradura" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBFF842227A9D55F00F43D1D;
+			productRefGroup = CBFF842C27A9D55F00F43D1D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBFF842A27A9D55F00F43D1D /* cerradura */,
+				CBFF843A27A9D55F00F43D1D /* cerraduraTests */,
+				CBFF844427A9D55F00F43D1D /* cerraduraUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBFF842927A9D55F00F43D1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBFF843627A9D55F00F43D1D /* Preview Assets.xcassets in Resources */,
+				CBFF843327A9D55F00F43D1D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBFF843927A9D55F00F43D1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBFF844327A9D55F00F43D1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBFF842727A9D55F00F43D1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBFF843127A9D55F00F43D1D /* ContentView.swift in Sources */,
+				CBFF842F27A9D55F00F43D1D /* cerraduraApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBFF843727A9D55F00F43D1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBFF844027A9D55F00F43D1D /* cerraduraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBFF844127A9D55F00F43D1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBFF844C27A9D55F00F43D1D /* cerraduraUITestsLaunchTests.swift in Sources */,
+				CBFF844A27A9D55F00F43D1D /* cerraduraUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBFF843D27A9D55F00F43D1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBFF842A27A9D55F00F43D1D /* cerradura */;
+			targetProxy = CBFF843C27A9D55F00F43D1D /* PBXContainerItemProxy */;
+		};
+		CBFF844727A9D55F00F43D1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBFF842A27A9D55F00F43D1D /* cerradura */;
+			targetProxy = CBFF844627A9D55F00F43D1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CBFF844D27A9D55F00F43D1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CBFF844E27A9D55F00F43D1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBFF845027A9D55F00F43D1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"cerradura/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = camsp.cerradura;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CBFF845127A9D55F00F43D1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"cerradura/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = camsp.cerradura;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CBFF845327A9D55F00F43D1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = camsp.cerraduraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cerradura.app/cerradura";
+			};
+			name = Debug;
+		};
+		CBFF845427A9D55F00F43D1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = camsp.cerraduraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cerradura.app/cerradura";
+			};
+			name = Release;
+		};
+		CBFF845627A9D55F00F43D1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = camsp.cerraduraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = cerradura;
+			};
+			name = Debug;
+		};
+		CBFF845727A9D55F00F43D1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = camsp.cerraduraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = cerradura;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBFF842627A9D55F00F43D1D /* Build configuration list for PBXProject "cerradura" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBFF844D27A9D55F00F43D1D /* Debug */,
+				CBFF844E27A9D55F00F43D1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBFF844F27A9D55F00F43D1D /* Build configuration list for PBXNativeTarget "cerradura" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBFF845027A9D55F00F43D1D /* Debug */,
+				CBFF845127A9D55F00F43D1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBFF845227A9D55F00F43D1D /* Build configuration list for PBXNativeTarget "cerraduraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBFF845327A9D55F00F43D1D /* Debug */,
+				CBFF845427A9D55F00F43D1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBFF845527A9D55F00F43D1D /* Build configuration list for PBXNativeTarget "cerraduraUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBFF845627A9D55F00F43D1D /* Debug */,
+				CBFF845727A9D55F00F43D1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBFF842327A9D55F00F43D1D /* Project object */;
+}
