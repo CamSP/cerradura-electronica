@@ -5,6 +5,7 @@ import network
 import time
 from config import config
 from RFID import RFID
+import _thread
 
 ## Encendido de Leds
 f=1000 
@@ -42,8 +43,8 @@ def blinkLed(led):
     time.sleep(0.3)
     led.duty(0)
     
-def blink(state):
-    if state == True:
+def blinkOn():
+    if cfg.isConnected():
         ledON.duty(d)
         ledWIFI.duty(d)
         time.sleep(1)
@@ -67,6 +68,7 @@ def blink(state):
 
 
 cfg = config()
+_thread.start_new_thread(blinkOn, ())
 #cfg.reset()
 
 
@@ -76,7 +78,7 @@ rdr = RFID()
 registering = False
 while True:
 
-    blink(cfg.isConnected())
+    #blinkOn(cfg.isConnected())
     card_value = rdr.getCard()
     if card_value == rdr.getSecretCard():
         print("match")
