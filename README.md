@@ -73,8 +73,8 @@ Se utilizaron componentes smd.
 
 ### ESP32
 
-El controlador esp32 fue utilizado porque facilita la comunicación WiFi y Bluetooth. Además si programación es através de 
-Micropython o el ide de Arduino. Esto significa hace rápido la programación si existen las librerías paraos sensores.
+El controlador esp32 fue utilizado porque facilita la comunicación WiFi y Bluetooth. Además su programación es através de 
+Micropython o el ide de Arduino. Esto hace rápida la programación si existen las librerías paraos sensores.
 
 ### Etapa de potencia
 * modulo ams1117
@@ -95,7 +95,7 @@ Para el lector RFID se utilizó el módulo comercial que incluye el sistema de m
 
 ### Sensor de huella
 
-El módulo utilizado es el as608, un módulo fácil de conseguir y que permite uns programación sensilla con las librerías,
+El módulo utilizado es el as608, un módulo fácil de conseguir, el cual permite una programación sensilla con las librerías existentes,
 Este módulo tiene una memoria y permite guardar y verificar las huellas ingresadas, además su comunicación es serial.
 
 ### LEDS de funcionamiento
@@ -106,7 +106,7 @@ Si hay WiFi o si está abierta o cerrada la cerradura.
 ### Programador
 
 La programación se hizo con micropython porque Python es un lenguaje conocido y fácil de entender, además de tener 
-Las librerías necesarias para el proyecto, se utizi la idea Tommy de Linux y se subieron los diferentes programas con un computador cuyo
+Las librerías necesarias para el proyecto, se utizo la ide Tommy de Linux y se subieron los diferentes programas con un computador cuyo
 Sistema operativo es Linux. 
 Para el sensor de la huella, fue necesario buscar el tipo de programación que utiliza y 
 Como programarlo con Python, es lo más importante, después se utilizó la libreria del sensor correspondiente
@@ -115,5 +115,5 @@ De enviar un bit y abrir la cerradura.
 
 ### Medición de voltaje
 
-Se utilizó un regulador de voltaje para 3.3v para los diferentes sensores y el esp32y otro para 12v que corresponde con la tensión de la cerradura 
+Se utilizó un regulador de voltaje para 3.3v para los diferentes sensores y el esp32 y otro para 12v que corresponde con la tensión de la cerradura.
 
