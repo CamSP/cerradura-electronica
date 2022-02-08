@@ -78,10 +78,10 @@ En cuanto a los capacitores, dos capacitores iguales de  alrededor de los 22uF.
 Tambien el fabricante sugiere un diodo shcottky para no interferir con la velocidad de funcionamiento del modulo mt3608.
 
 ### Cerradura
-Para el circuito de la cerradura se utiliza un rele de 3v que se conencta a una de las salidas digitales del ESP32. Entre los terminales normalmente abiertos se conecta la cerradura y 12v que la alimentan, de forma que cuando el relese enciende se energiza la cerradura. Por otro lado, dado que el rele y la cerradura utilizan enbobinados para funcionar, es necesario proteger el circuito de posibles corrientes parasitas que estas generen una vez dejen de estar energizadas, de esta forma se conecta un diodo entre GND y la entrada digital que se conecta al rele, y otro diodo entre GND y la conexión entre el rele y la cerradura.
+Para el circuito de la cerradura se utiliza un rele de 3v que se conencta a una de las salidas digitales del ESP32. Entre los terminales normalmente abiertos se conecta la cerradura y 12v que la alimentan, de forma que cuando el rele se enciende se energiza la cerradura. Por otro lado, dado que el rele y la cerradura utilizan enbobinados para funcionar, es necesario proteger el circuito de posibles corrientes parasitas que estas generen una vez dejen de estar energizadas, de esta forma se conecta un diodo entre GND y la entrada digital que se conecta al rele, y otro diodo entre GND y la conexión entre el rele y la cerradura.
 
 ### RFID
-
+Para el lector RFID se utilizó el módulo comercial que incluye el sistema de modulación y demodulación de 13.56 MHz y la respectiva antena para la lectura. El módulo se comunica por SPI por lo que puede ser utilizado con el ESP32 sin problemas. La conexión a la placa se realiza mediante una serie de puertos donde se introducen los pines del RFID; trabaja con 3.3 voltios por lo que puede ser utilizado directamente con una alimentación de 5 voltios. El pin de alimentación tiene una conexión con un condensador para proteger el módulo y de allí al relé.
 
 ### Sensor de huella
 

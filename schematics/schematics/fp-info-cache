@@ -1,11 +1,25 @@
-16934135883506373
+16924311137350373
 1N4004
-DIOM7959X265N
+TO-92
 
 
 0
-2
-2
+3
+3
+1N4004
+TO-220-STANDING
+
+
+0
+3
+3
+1N4004
+TO254P1041X444X2933-3
+
+
+0
+3
+3
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -46094,13 +46108,6 @@ One digit LED 7 segment SA39-11 SC39-11 SA39-12 SC39-12
 0
 10
 10
-ESP32-WROVER-I
-XCVR_ESP32-WROVER-I
-
-
-0
-39
-39
 Ferrite_THT
 LairdTech_28C0236-0JW-10
 Ferrite, vertical, LairdTech 28C0236-0JW-10, https://assets.lairdtech.com/home/brandworld/files/28C0236-0JW-10.pdf, JW Miller core https://www.bourns.com/products/magnetic-products/j.w.-miller-through-hole-ferrite-beads-emi-filters
@@ -65988,20 +65995,6 @@ Potentiometer vertical Vishay T73YP
 0
 3
 3
-RC522
-RC522
-
-
-0
-8
-8
-RC522
-boton
-Ultra-small-sized Tactile Switch with High Contact Reliability, Top-actuated Model, without Ground Terminal, with Boss
-Tactile Switch
-0
-2
-2
 RF
 Skyworks_SKY13575_639LF
 http://www.skyworksinc.com/uploads/documents/SKY13575_639LF_203270D.pdf
@@ -70083,13 +70076,6 @@ Logo WEEE
 0
 0
 0
-TP4056
-TP4056-18650
-
-
-0
-6
-6
 TerminalBlock
 TerminalBlock_Altech_AK300-2_P5.00mm
 Altech AK300 terminal block, pitch 5.0mm, 45 degree angled, see http://www.mouser.com/ds/2/16/PCBMETRC-24178.pdf
@@ -75291,31 +75277,3 @@ varistor SIOV
 0
 2
 2
-inductor
-IND_DFEH12060D-220M=P3
-
-
-0
-2
-2
-inductor
-IND_RLS-226-R
-
-
-0
-2
-2
-mt3608
-mt3608
-
-
-0
-6
-6
-mt3608
-mt3608pcb
-
-
-0
-4
-4
