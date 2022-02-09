@@ -63,8 +63,18 @@ El elemento diferencial de nuestro producto a los demás sistemas que se encuent
 
 ## Diseño del circuito
 
+Primero se partió del controlador a utilizar, en este caso el esp32,
+Seguidamente se determinaron los módulos a utilizar, el RFID, el sensor de huella,
+Con esto presente se determinaron los pines necesarios para los módulos, además se realizó la etapa de potencia, 
+Y los actuadores, la cerradura. Se realizó la pcb en kicad. Se incluyó indicadores, LEDs, para cada función 
+Importante. El diseño también se hizo modular en el programa kicad. 
+Se incluyeron los agujeros para la sujeción de la placa y se realizó la pcb en allpcb.
+Se utilizaron componentes smd.
+
 ### ESP32
 
+El controlador esp32 fue utilizado porque facilita la comunicación WiFi y Bluetooth. Además su programación es através de 
+Micropython o el ide de Arduino. Esto hace rápida la programación si existen las librerías paraos sensores.
 
 ### Etapa de potencia
 * modulo ams1117
@@ -85,13 +95,25 @@ Para el lector RFID se utilizó el módulo comercial que incluye el sistema de m
 
 ### Sensor de huella
 
+El módulo utilizado es el as608, un módulo fácil de conseguir, el cual permite una programación sensilla con las librerías existentes,
+Este módulo tiene una memoria y permite guardar y verificar las huellas ingresadas, además su comunicación es serial.
 
 ### LEDS de funcionamiento
 
+Se incluyeron LEDs como indicadores, para saber si hay batería, 
+Si hay WiFi o si está abierta o cerrada la cerradura.
 
 ### Programador
 
+La programación se hizo con micropython porque Python es un lenguaje conocido y fácil de entender, además de tener 
+Las librerías necesarias para el proyecto, se utizo la ide Tommy de Linux y se subieron los diferentes programas con un computador cuyo
+Sistema operativo es Linux. 
+Para el sensor de la huella, fue necesario buscar el tipo de programación que utiliza y 
+Como programarlo con Python, es lo más importante, después se utilizó la libreria del sensor correspondiente
+Y se estudió la librería para utilizarla con dos fines, guardas huellas y verificar huellas guardadas, con el fin 
+De enviar un bit y abrir la cerradura.
 
 ### Medición de voltaje
 
+Se utilizó un regulador de voltaje para 3.3v para los diferentes sensores y el esp32 y otro para 12v que corresponde con la tensión de la cerradura.
 
