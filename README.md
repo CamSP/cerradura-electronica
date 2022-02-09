@@ -209,3 +209,14 @@ Luego se utiliza la función openLock que abre la cerradura durante 3 segundos. 
 
 
 ## Errores y observaciones
+
+A lo largo del desarrollo de la placa para la cerradura electrónica se encontraron distintos problemas, principalmente relacionados con el circuito, algunos de ellos son:
+
+* La corriente para el elevador de voltaje no era suficiente; el regulador de 3.3 V entregaba una corriente máxima de 1 A y la cerradura por si sola consume un aproximado de 0.5 A cuando se abre, debido a esto el regulador no alcanza a alimentar tanto la cerradura abierta como a los demás componentes del circuito, evitando el funcionamiento correcto, La solución a esto es colocar el elevador de voltaje de 3.3 V a 12 V conectado directamente a las baterías en lugar de conectarlo al regulador de 3.3 V.
+
+* En el diseño original no se incluyó un transistor BJT conectado al relé, esto ocasionaba un problema ya que no se estaba alimentando al mismo con suficiente corriente, esto se relacionaba con el punto anterior y el problema de distribución de energía; la solución fue conectar un transistor 2n2222 al relé, lo que mostraba su funcionamiento correctamente.
+
+* Existió un error al hacer la conexión de una bobina en el circuito, esta se conectaba directamente a un diodo para lograr su funcionamiento, sin embargo, al hacer la conexión, se puso del lado del incorrecto del diodo, por lo que al probar el circuito, esta sección no respondía. La solución a esto fue sencilla, en este caso rearreglar las conexiones de los terminales en la bobina y el diodo para ubicarlos en el lado correcto solucionó el problema y se logró que la sección funcionara. 
+
+
+
