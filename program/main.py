@@ -52,14 +52,10 @@ except Exception as e:
     #reset()
 
 def blinkLed(led):
-    d = 300
     led.duty(d)
     time.sleep(0.3)
     led.duty(0)
     time.sleep(0.3)
-    led.duty(d)
-    time.sleep(0.3)
-    led.duty(0)
     
 def blinkOn():
     if cfg.isConnected():
@@ -69,20 +65,14 @@ def blinkOn():
         ledON.duty(0)
         ledWIFI.duty(0)
         time.sleep(1)
-        ledON.duty(d)
-        ledWIFI.duty(d)
-        time.sleep(1)
-        ledON.duty(0)
-        ledWIFI.duty(0)
+
     else:
         ledWIFI.duty(0)
         ledON.duty(d)
         time.sleep(1)
         ledON.duty(0)
         time.sleep(1)
-        ledON.duty(d)
-        time.sleep(1)
-        ledON.duty(0)
+
 
 def openLock():
     cerradura.value(False)

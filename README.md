@@ -19,7 +19,7 @@ El elemento diferencial de nuestro producto a los demás sistemas que se encuent
 * La lectura de huella dactilar y el reconocimiento facial puede realizarse por medio de la aplicación movil.
 * En caso de que haya un corte en la energía, el sistema seguiŕa funcionando con baterias.
 
-![alt text](/diagrama_de_bloques_2.png)
+![alt text](/images/Diagrama de bloques.png)
 
 ## Requerimientos no funcionales
 * Debido al uso de la cerradura electrónica, la cerradura mecánica convencional no es necesaria, sin embargo, en caso de que el cliente lo desee, se pueden usar ambas en conjunto.
@@ -113,7 +113,99 @@ Como programarlo con Python, es lo más importante, después se utilizó la libr
 Y se estudió la librería para utilizarla con dos fines, guardas huellas y verificar huellas guardadas, con el fin 
 De enviar un bit y abrir la cerradura.
 
-### Medición de voltaje
+## Programación
+Para la programación se utilizo micropython con el IDE Thonny, a partir de esto, se establecieron las siguientes clases:
 
-Se utilizó un regulador de voltaje para 3.3v para los diferentes sensores y el esp32 y otro para 12v que corresponde con la tensión de la cerradura.
+### Database
+Con el fin de mantener una comunicación entre la aplicación móvil fue necesario diseñar una base de datos en firestore en la que se almacena el estado de la cerradura (abierto o cerrado), los usuarios propietarios, nombre personalizado de la cerradura y un id unico del producto. Dado que en micropython no se encuentra ninguna librería con soporte para firestore, se utilizaron operaciones CRUD y por practicidad a la hora de utilizar los recursos del ESP32, se manejo una arquitectura poco eficiente para la base de datos. De esta manera, cada documento cuenta con 2 valores (nombre e id) y 2 subdocumentos donde se almacena el estado de la cerradura y la cantidad de usuarios registrados en la cerradura.
 
+A partir de esto, se estableció la clase database con las siguientes funciones:
+
+* __init__: 
+El constructor de la clase establece el URL de la base de datos junto con su API key. Recibe los parametros id, name, user y config; los 3 primeros corresponden a datos que se almacenan en la base de datos, mientras que config hace referencia a si es la primera vez que se conecta la cerradura y es necesario crear un nuevo documento en la base de datos.
+
+* createDB:
+Recibe los argumentos user, name e id. A partir de ellos crea los documentos necesarios en la base de datos para el futuro uso de la cerradura y aplicación.
+
+* listener:
+Para tener una comunicación constante con la base de datos, la cerradura constantemente consulta el estado de esta para evidenciar los cambios realizados desde la aplicación. Normalmente este proceso se realiza con websockets, pero, dada la falta de soporte en micropython y que es un ejercicio academico se opto por un metodo más practico pero menos eficiente.
+
+### Config:
+Esta clase es la primer en se ejecutada, se encarga de configurar la cerradura, ya sea o no la primera vez que se enciende. Para ello se realiza el siguiente procedimiento:
+
+
+Si es la primera vez que se utiliza la cerradura, se genera un uuid y se scanean las redes wifi disponibles en la zona, posteriormente, se ejecuta un webserver al que se puede accerder a traves del wifi. Ingresando a la dirección 192.168.4.1 se accede a un formulario donde se pregunta el nombre de la cerradura, un correo para asociarla, y la red wifi con su contraseña. Una vez que se llena el formulario, el ESP32 intenta conectarse al WiFi. Posteriormente se almacenan los datos en un archivo JSON, en caso de que la conexión falle, la cerradura se reinicia y se repide el proceso.
+
+Si no es la primera vez que se enciende la cerradura, se lee el archivo JSON en busca del SSID y la contraseña del WiFi para ser conectados.
+
+Con esto en mente, se utilizan las siguientes funciones:
+
+* __init__:
+
+El constructor inicializa ambos modos de WiFi, es decir, como una estación o como un punto de acceso, luego lee el JSON, si el valor de UUID es nulo, genera uno nuevo y posteriormente reviza el parametro config, si este ensta en True llama a la función connect y establece la conexión con el WiFi. En caso de que config este en False, scannea los SSID's cercanos e inicializa el webserver.
+
+* scan:
+
+Realiza la busqueda de las redes cercanas y retorna sus respectivos SSID's.
+
+* connect:
+Esta función se encarga de establecer la conexión con el WiFi, recibe un SSID y una contraseña e intenta conectarse en un lapso de 10 segundos, pasado este tiempo se da por hecho de que no fue posible realizar la conexión retornando el valor de False. En caso contrario retornarpa True.
+
+* _httpHandlerSSIDGet:
+Se encarga de envíar la lista de los SSID's al webserver.
+
+* _httpHandlerDataPost:
+Recibe los datos del formulario alojado en el webserver, una vez obtendos llama a la función connect, y si esta retorna True, guarda los valores del formulario en el JSON. Finalmente reinicia el sistema.
+
+* runServer:
+Activa el WiFi en modo access point, utiliza las 2 funciones anteriores como route handlers e inicializa el servidos con los archivos de HTML, CSS y JS contenidos en la carpeta /www. Finalmente, inicia el servidor.
+
+* stopServer:
+Detiene el servidor.
+
+* isConnected:
+Es una función para conocer el estado del WiFi en un entorno externo a la clase. Esta sera usada posteriormente en el main del sistema.
+
+* reset:
+Se encarga de restablecer la cerradura a los valores de "fabrica", reescribiendo el JSON en valores iniciales.
+
+### HTML, CSS y JavaScript
+Con el HTML y CSS se crea un formulario sencillo y agradable a la vista. Posteriormente se ejecuta un script de JavaScript el cual recbe los datos de los SSID's y genera una lista de redes disponibles en un drop down. Cuando el formulario es completado, obtiene los valores de cada campo y los almacena en un JSON para ser enviado al "backend" del webserver.
+
+
+### RFID
+
+Esta clase maneja los diferentes UUID's de las tarjetas RFID registradas en la cerradura. Hace uso de la librería mfrc522 para controlar el sensor. Para administrar y configurar la cerradura se utiliza una tarjeta de configuración, en el archivo main se observará su uso.
+
+* __init__:
+El constructor se encarga de inicializar el sensor RC522 por medio de SPI, se establece el UUID de la tarjeta de configuración y el nombre del archivo de texto que almacena los RFIDs.
+
+* check_card_code:
+Recive un UUID de un RFID, abre el archivo con la lista de RFIDs guardados y compara si este valor se encuentra en dicha lista, en caso de que si, retornará True, de lo contrario False.
+
+* getCard:
+Obtiene el UUID de la tarjeta leida.
+
+* getSecretCard:
+Retorna el valor de la tarjeta de configuración.
+
+
+
+### Main
+Este es el archivo que se ejecuta cuando se inicia la cerradura, priomero se establece la frecuencia y el duty cicle para el PWM de los LEDS, luego se inicializa cada uno de ellos y se establece la comunicación con el sensor de huela AS608. Luego se establecen 2 funciones para generar un parpadeo en los LEDs:
+
+* blinkLed:
+Realiza un corto blink en el led recibido.
+
+* blinkOn:
+Por medio de un hilo para que nunca se detenga, se ejecuta un blink en el led de encendido, en caso de que el WiFi este conectado, el LED de este tambien parpadeara.
+
+Luego se utiliza la función openLock que abre la cerradura durante 3 segundos. Posteriormente se inicializa la clase config, luego se lee el archivo JSON y se inicializa la base de datos, finalmente se inicializa la clase RFID. Luego se crea un bucle infinito que esta constantemente leyendo el RFID y el sensor de huella, en caso de que haya una coincidencia se llama a la función openLock. Si al tarjeta leida es la de configuración, la siguiente tarjeta o huella leida se guardan para que posteriormente sean usadas para abrir la puerta.
+
+### Aplicación (IOS)
+
+
+## Carcasa y construcción fisica
+
+
+## Errores y observaciones

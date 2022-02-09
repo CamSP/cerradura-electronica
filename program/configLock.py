@@ -96,7 +96,6 @@ class config:
         self.cfg["users"] = email
         self.stopServer() 
         if self.connect(ssid, password) == True:
-            
             self.cfg["ssid"] = ssid
             self.cfg["password"] = password
             database(self.cfg["uuid"], self.cfg["name"], self.cfg["users"], config=self.cfg["config"])
@@ -105,7 +104,7 @@ class config:
             with open('cfg.json', "w") as f:
                 f.write(json.dumps(self.cfg))
         
-            machine.reset()  
+        machine.reset()  
         httpResponse.WriteResponseJSONOk()
 
         
