@@ -1,18 +1,18 @@
 #Librerias
-from machine import Pin,PWM
-import network
 import time
-from config import config
+from pyfingerprint import PyFingerprint
+from pyfingerprint import *
+from machine import Pin, PWM, UART, reset
+from database import database
+from configLock import config
 from RFID import RFID
 import _thread
 import json
-from database import database
 import gc
 
 
 gc.enable()
-## Encendido de Leds
-f=1000 
+freq=1000 
 d=300 
 
 ledON=PWM(Pin(27))
@@ -22,12 +22,12 @@ ledError=PWM(Pin(14))
 ledConfig=PWM(Pin(13))
 ledWIFI=PWM(Pin(26))
 
-ledON.freq(f)
-ledOpen.freq(f)
-ledSuccess.freq(f)
-ledError.freq(f)
-ledConfig.freq(f)
-ledWIFI.freq(f)
+ledON.freq(freq)
+ledOpen.freq(freq)
+ledSuccess.freq(freq)
+ledError.freq(freq)
+ledConfig.freq(freq)
+ledWIFI.freq(freq)
 
 ledON.duty(d)
 ledOpen.duty(0)
@@ -36,6 +36,20 @@ ledError.duty(0)
 ledConfig.duty(0)
 ledWIFI.duty(0)
 
+sensorSerial = UART(1)
+sensorSerial.init(57600, bits=8, parity=None, stop=1, rx=10, tx=9)
+try:
+    # creo el objeto huella
+    f = PyFingerprint(sensorSerial)
+    f.clearDatabase()
+    #se revisa la contraseña del sensor
+    if ( f.verifyPassword() == False ):
+        raise ValueError('The given fingerprint sensor password is wrong!')
+#revisar si existe
+except Exception as e:
+    print(e)
+    print("Error del sensor")
+    #reset()
 
 def blinkLed(led):
     d = 300
@@ -70,31 +84,35 @@ def blinkOn():
         time.sleep(1)
         ledON.duty(0)
 
+def openLock():
+    cerradura.value(False)
+    ledOpen.duty(d)
+    time.sleep(3)
+    cerradura.value(True)
+    ledOpen.duty(0)
 
 cfg = config()
 gc.collect()
 _thread.start_new_thread(blinkOn, ())
-with open('cfg.json', "r") as f:
-    cfgJSON = json.load(f)
+with open('cfg.json', "r") as js:
+    cfgJSON = json.load(js)
     
 db = database(cfgJSON["uuid"], cfgJSON["name"], cfgJSON["users"], config=cfgJSON["config"])
-
+gc.collect()
 
 cerradura = Pin(2, Pin.OUT)
 cerradura.value(True)
 rdr = RFID()
 registering = False
 while True:
-
     card_value = rdr.getCard()
+    
     if card_value == rdr.getSecretCard():
         print("Modo configuración")
         registering = True
         ledConfig.duty(d)
-        time.sleep(1)
-        ledConfig.duty(0)
-        time.sleep(1)
         continue
+
     if registering:
         while True:
             card_value = rdr.getCard()
@@ -103,42 +121,31 @@ while True:
                 registering = False
                 print("guardado")
                 blinkLed(ledSuccess)
-                break          
+                break     
+
+            if f.readImage() == True:
+                f.createTemplate()
+                f.storeTemplate()
+                print("Dedo guardado")
+                registering = False
+                gc.collect()
+                break
+                
     else:
         if card_value != '':
             if rdr.check_card_code(code_from_card=card_value):
-                cerradura.value(False)
-                ledOpen.duty(d)
-                time.sleep(3)
-                cerradura.value(True)
-                ledOpen.duty(0)
+                openLock()
             else:
                 blinkLed(ledError)
 
 
-
-                    
-# from machine import Pin
-# from machine import Timer
-# import time
-# import _thread
-# import mfrc522
-# from pyfingerprint import PyFingerprint
-# from machine import UART
-
-# sensorSerial = UART(1)
-# # ESP32 (pins 12, 13)
-# sensorSerial.init(57600, bits=8, parity=None, stop=1, rx=10, tx=9)
-# # pyboard v1.1 (pins X9, X10)
-# # sensorSerial.init(57600, bits=8, parity=None, stop=1)
-
-# f = PyFingerprint(sensorSerial)
-# print(f.readImage()) # should return True
-
-    
-    
-    
-    
-    
-    
-    
+        if f.readImage() == True:
+            try:
+                f.convertImage()
+                if f.searchTemplate()[0] != -1:
+                    openLock()
+                else:
+                    print("Desconocido")
+            except:
+                print("Fallo")
+    gc.collect()

@@ -6,7 +6,6 @@ import gc
 import uuid
 from database import database
 import machine
-from sys import exit
 
 
 
