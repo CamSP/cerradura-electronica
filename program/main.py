@@ -1,12 +1,16 @@
 #Librerias
 from machine import Pin,PWM
-from machine import Pin
 import network
 import time
 from config import config
 from RFID import RFID
 import _thread
+import json
+from database import database
+import gc
 
+
+gc.enable()
 ## Encendido de Leds
 f=1000 
 d=300 
@@ -68,8 +72,12 @@ def blinkOn():
 
 
 cfg = config()
+gc.collect()
 _thread.start_new_thread(blinkOn, ())
-#cfg.reset()
+with open('cfg.json', "r") as f:
+    cfgJSON = json.load(f)
+    
+db = database(cfgJSON["uuid"], cfgJSON["name"], cfgJSON["users"], config=cfgJSON["config"])
 
 
 cerradura = Pin(2, Pin.OUT)
@@ -78,10 +86,9 @@ rdr = RFID()
 registering = False
 while True:
 
-    #blinkOn(cfg.isConnected())
     card_value = rdr.getCard()
     if card_value == rdr.getSecretCard():
-        print("match")
+        print("Modo configuración")
         registering = True
         ledConfig.duty(d)
         time.sleep(1)
@@ -100,10 +107,10 @@ while True:
     else:
         if card_value != '':
             if rdr.check_card_code(code_from_card=card_value):
-                cerradura.value(True)
+                cerradura.value(False)
                 ledOpen.duty(d)
                 time.sleep(3)
-                cerradura.value(False)
+                cerradura.value(True)
                 ledOpen.duty(0)
             else:
                 blinkLed(ledError)

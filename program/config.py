@@ -5,6 +5,8 @@ import json
 import gc
 import uuid
 from database import database
+import machine
+from sys import exit
 
 
 
@@ -27,7 +29,6 @@ class config:
 
         if self.cfg["config"] == True:
             self.connect(self.cfg["ssid"], self.cfg["password"])
-            self.db = database(self.cfg["uuid"], self.cfg["name"], self.cfg["users"], self.cfg["config"])
         else:
             print("run server")
             self.ssids = self.scan()
@@ -47,6 +48,7 @@ class config:
         print("Stop!")
         self.svr.Stop()
         gc.collect()
+        return
 
     def scan(self):
         self.sta.active(True)
@@ -54,6 +56,7 @@ class config:
         return ssids
 
     def connect(self, ssid, password):
+        
         self.ap.active(False)
         self.sta.active(True)
         self.sta.connect(ssid, password)
@@ -65,11 +68,7 @@ class config:
                 print("Fallo!")
                 return False
             pass
-        if self.sta.isconnected() == True:
-            print(self.sta.ifconfig())
-            print("Connected!")
-            
-            return True
+        return True
 
     def _httpHandlerSSIDGet(self, httpClient, httpResponse):
         try:
@@ -96,18 +95,21 @@ class config:
         print(email, ssid, name, password)
         self.cfg["name"] = name
         self.cfg["users"] = email
-
+        self.stopServer() 
         if self.connect(ssid, password) == True:
+            
             self.cfg["ssid"] = ssid
             self.cfg["password"] = password
+            database(self.cfg["uuid"], self.cfg["name"], self.cfg["users"], config=self.cfg["config"])
             self.cfg["config"] = True
-            self.db = database(self.cfg["uuid"], self.cfg["name"], self.cfg["users"], self.cfg["config"])
+    
             with open('cfg.json', "w") as f:
                 f.write(json.dumps(self.cfg))
-        self.stopServer()
-        gc.collect()           
-
+        
+            machine.reset()  
         httpResponse.WriteResponseJSONOk()
+
+        
 
     def reset(self):
         self.cfg["ssid"] = ""
