@@ -170,7 +170,7 @@ Es una función para conocer el estado del WiFi en un entorno externo a la clase
 Se encarga de restablecer la cerradura a los valores de "fabrica", reescribiendo el JSON en valores iniciales.
 
 ### HTML, CSS y JavaScript
-Con el HTML y CSS se crea un formulario sencillo y agradable a la vista. Posteriormente se ejecuta un script de JavaScript el cual recbe los datos de los SSID's y genera una lista de redes disponibles en un drop down. Cuando el formulario es completado, obtiene los valores de cada campo y los almacena en un JSON para ser enviado al "backend" del webserver.
+Con el HTML y CSS se crea un formulario sencillo y agradable a la vista. Posteriormente se ejecuta un script de JavaScript el cual recibe los datos de los SSID's y genera una lista de redes disponibles en un drop down. Cuando el formulario es completado, obtiene los valores de cada campo y los almacena en un JSON para ser enviado al "backend" del webserver.
 
 
 ### RFID
@@ -192,7 +192,7 @@ Retorna el valor de la tarjeta de configuración.
 
 
 ### Main
-Este es el archivo que se ejecuta cuando se inicia la cerradura, priomero se establece la frecuencia y el duty cicle para el PWM de los LEDS, luego se inicializa cada uno de ellos y se establece la comunicación con el sensor de huela AS608. Luego se establecen 2 funciones para generar un parpadeo en los LEDs:
+Este es el archivo que se ejecuta cuando se inicia la cerradura, primero se establece la frecuencia y el duty cicle para el PWM de los LEDS, luego se inicializa cada uno de ellos y se establece la comunicación con el sensor de huela AS608. Luego se establecen 2 funciones para generar un parpadeo en los LEDs:
 
 * blinkLed:
 Realiza un corto blink en el led recibido.
@@ -200,7 +200,7 @@ Realiza un corto blink en el led recibido.
 * blinkOn:
 Por medio de un hilo para que nunca se detenga, se ejecuta un blink en el led de encendido, en caso de que el WiFi este conectado, el LED de este tambien parpadeara.
 
-Luego se utiliza la función openLock que abre la cerradura durante 3 segundos. Posteriormente se inicializa la clase config, luego se lee el archivo JSON y se inicializa la base de datos, finalmente se inicializa la clase RFID. Luego se crea un bucle infinito que esta constantemente leyendo el RFID y el sensor de huella, en caso de que haya una coincidencia se llama a la función openLock. Si al tarjeta leida es la de configuración, la siguiente tarjeta o huella leida se guardan para que posteriormente sean usadas para abrir la puerta.
+Luego se utiliza la función openLock que abre la cerradura durante 3 segundos. Posteriormente se inicializa la clase config, luego se lee el archivo JSON y se inicializa la base de datos, finalmente se inicializa la clase RFID. Luego se crea un bucle infinito que esta constantemente leyendo el RFID y el sensor de huella, en caso de que haya una coincidencia se llama a la función openLock. Si la tarjeta leida es la de configuración, la siguiente tarjeta o huella leida se guardan para que posteriormente sean usadas para abrir la puerta.
 
 ### Aplicación (IOS)
 
