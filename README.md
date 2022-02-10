@@ -190,7 +190,7 @@ Obtiene el UUID de la tarjeta leida.
 Retorna el valor de la tarjeta de configuración.
 
 ### Fingerprint as608
-Para este sensor se utilizaron las librerias pyfingerprint y machine. pyfingerprint tiene todos las instrucciones necesarias para comunicarse con el as608, además tiene tiene funciones importantes para utilizar el sensor de huella, como su almacenamiento y operación.
+Para este sensor se utilizaron las librerias pyfingerprint y machine. pyfingerprint tiene todas las instrucciones necesarias para comunicarse con el as608, además tiene  funciones importantes para utilizar el sensor para huella, como su almacenamiento y operación.
 La libreria contiene una clase, que es necesaria para identificar el sensor, por lo tanto se debe crear esa clase para utilizar sus métodos y así hacer las lecturas necesarias.
 
 * verifyPasswird():
