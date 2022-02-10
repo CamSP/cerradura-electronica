@@ -101,7 +101,8 @@ class database:
 
         # Si se produce un error se reinicia el sistema
         except:
-            reset()
+            return
+            #reset()
 
 
  
