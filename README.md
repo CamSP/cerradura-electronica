@@ -225,9 +225,11 @@ Por medio de un hilo para que nunca se detenga, se ejecuta un blink en el led de
 Luego se utiliza la función openLock que abre la cerradura durante 3 segundos. Posteriormente se inicializa la clase config, luego se lee el archivo JSON y se inicializa la base de datos, finalmente se inicializa la clase RFID. Luego se crea un bucle infinito que esta constantemente leyendo el RFID y el sensor de huella, en caso de que haya una coincidencia se llama a la función openLock. Si la tarjeta leida es la de configuración, la siguiente tarjeta o huella leida se guardan para que posteriormente sean usadas para abrir la puerta.
 
 ### Aplicación (IOS)
+La aplicación fue realizada en Swift para plataformas con IOS y IPadOS (IPhone, IPod, IPad), puesto que este lenguaje, permite de manera sencilla utilizar los sensores biometricos del dispositivo (a diferencia de otros frameworks como react-native). Luego, la app tiene como proposito ser un intermediario entre la cerradura y el usuario, muestra las cerraduras que se encuentran en propiedad de la persona, para ello, utiliza la autentificación por email de Firebase, y posteriormente realiza busquedas en los diferentes documentos de forma que se encuentren coincidencias con el correo del usuario. A partir de esto, es posible abrir la cerradura deseada por medio de la autentificación proporcionada por IOS de FaceID.Se esperaba añadir más funciones como agregar o eliminar usuarios de una cerradura, pero por razones de tiempo no fue posible.
+
+## Carcasa y construcción
 
 
-## Carcasa y construcción fisica
 
 
 ## Errores y observaciones
