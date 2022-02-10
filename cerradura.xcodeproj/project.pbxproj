@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB305C1B27AB3CDC00F4BB22 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB305C1A27AB3CDC00F4BB22 /* login.swift */; };
+		CB305C1D27AB404D00F4BB22 /* signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB305C1C27AB404D00F4BB22 /* signup.swift */; };
+		CB305C2027AB582E00F4BB22 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CB305C1F27AB582E00F4BB22 /* GoogleSignIn */; };
+		CB305C2727AB658600F4BB22 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB305C2627AB658600F4BB22 /* data.swift */; };
+		CB305C2927AB6A7F00F4BB22 /* dataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB305C2827AB6A7F00F4BB22 /* dataStructure.swift */; };
+		CB819A3027B3BA890056750C /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB819A2F27B3BA890056750C /* RowView.swift */; };
+		CB819A3227B3BC8D0056750C /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB819A3127B3BC8D0056750C /* Lock.swift */; };
+		CB819A3427B3C51D0056750C /* lockInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB819A3327B3C51D0056750C /* lockInfo.swift */; };
 		CBFF842F27A9D55F00F43D1D /* cerraduraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFF842E27A9D55F00F43D1D /* cerraduraApp.swift */; };
-		CBFF843127A9D55F00F43D1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFF843027A9D55F00F43D1D /* ContentView.swift */; };
 		CBFF843327A9D55F00F43D1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBFF843227A9D55F00F43D1D /* Assets.xcassets */; };
 		CBFF843627A9D55F00F43D1D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBFF843527A9D55F00F43D1D /* Preview Assets.xcassets */; };
 		CBFF844027A9D55F00F43D1D /* cerraduraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFF843F27A9D55F00F43D1D /* cerraduraTests.swift */; };
 		CBFF844A27A9D55F00F43D1D /* cerraduraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFF844927A9D55F00F43D1D /* cerraduraUITests.swift */; };
 		CBFF844C27A9D55F00F43D1D /* cerraduraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFF844B27A9D55F00F43D1D /* cerraduraUITestsLaunchTests.swift */; };
+		CBFF847827AA1A4F00F43D1D /* Cerraduras.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFF847727AA1A4F00F43D1D /* Cerraduras.swift */; };
+		CBFF847A27AA1C3F00F43D1D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBFF847927AA1C3F00F43D1D /* GoogleService-Info.plist */; };
+		CBFF847E27AA2D5700F43D1D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CBFF847D27AA2D5700F43D1D /* FirebaseAnalytics */; };
+		CBFF848827AA2D5700F43D1D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CBFF848727AA2D5700F43D1D /* FirebaseAuth */; };
+		CBFF848E27AA2D5700F43D1D /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = CBFF848D27AA2D5700F43D1D /* FirebaseDatabase */; };
+		CBFF849427AA2D5700F43D1D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CBFF849327AA2D5700F43D1D /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +47,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB305C1A27AB3CDC00F4BB22 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
+		CB305C1C27AB404D00F4BB22 /* signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signup.swift; sourceTree = "<group>"; };
+		CB305C2327AB59B400F4BB22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CB305C2627AB658600F4BB22 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
+		CB305C2827AB6A7F00F4BB22 /* dataStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataStructure.swift; sourceTree = "<group>"; };
+		CB819A2F27B3BA890056750C /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		CB819A3127B3BC8D0056750C /* Lock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
+		CB819A3327B3C51D0056750C /* lockInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lockInfo.swift; sourceTree = "<group>"; };
 		CBFF842B27A9D55F00F43D1D /* cerradura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cerradura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBFF842E27A9D55F00F43D1D /* cerraduraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerraduraApp.swift; sourceTree = "<group>"; };
-		CBFF843027A9D55F00F43D1D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CBFF843227A9D55F00F43D1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBFF843527A9D55F00F43D1D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CBFF843B27A9D55F00F43D1D /* cerraduraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cerraduraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +64,9 @@
 		CBFF844527A9D55F00F43D1D /* cerraduraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cerraduraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBFF844927A9D55F00F43D1D /* cerraduraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerraduraUITests.swift; sourceTree = "<group>"; };
 		CBFF844B27A9D55F00F43D1D /* cerraduraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerraduraUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CBFF847727AA1A4F00F43D1D /* Cerraduras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cerraduras.swift; sourceTree = "<group>"; };
+		CBFF847927AA1C3F00F43D1D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CBFF847B27AA1C4300F43D1D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +74,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBFF848827AA2D5700F43D1D /* FirebaseAuth in Frameworks */,
+				CBFF849427AA2D5700F43D1D /* FirebaseFirestore in Frameworks */,
+				CB305C2027AB582E00F4BB22 /* GoogleSignIn in Frameworks */,
+				CBFF848E27AA2D5700F43D1D /* FirebaseDatabase in Frameworks */,
+				CBFF847E27AA2D5700F43D1D /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +99,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB305C1927AB3A8200F4BB22 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CBFF842E27A9D55F00F43D1D /* cerraduraApp.swift */,
+				CBFF847727AA1A4F00F43D1D /* Cerraduras.swift */,
+				CB305C1A27AB3CDC00F4BB22 /* login.swift */,
+				CB305C1C27AB404D00F4BB22 /* signup.swift */,
+				CB305C2627AB658600F4BB22 /* data.swift */,
+				CB305C2827AB6A7F00F4BB22 /* dataStructure.swift */,
+				CB819A2F27B3BA890056750C /* RowView.swift */,
+				CB819A3127B3BC8D0056750C /* Lock.swift */,
+				CB819A3327B3C51D0056750C /* lockInfo.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		CBFF842227A9D55F00F43D1D = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +138,10 @@
 		CBFF842D27A9D55F00F43D1D /* cerradura */ = {
 			isa = PBXGroup;
 			children = (
-				CBFF842E27A9D55F00F43D1D /* cerraduraApp.swift */,
-				CBFF843027A9D55F00F43D1D /* ContentView.swift */,
+				CB305C2327AB59B400F4BB22 /* Info.plist */,
+				CB305C1927AB3A8200F4BB22 /* Main */,
 				CBFF843227A9D55F00F43D1D /* Assets.xcassets */,
+				CBFF847B27AA1C4300F43D1D /* GoogleService-Info.plist */,
 				CBFF843427A9D55F00F43D1D /* Preview Content */,
 			);
 			path = cerradura;
@@ -123,6 +168,7 @@
 			children = (
 				CBFF844927A9D55F00F43D1D /* cerraduraUITests.swift */,
 				CBFF844B27A9D55F00F43D1D /* cerraduraUITestsLaunchTests.swift */,
+				CBFF847927AA1C3F00F43D1D /* GoogleService-Info.plist */,
 			);
 			path = cerraduraUITests;
 			sourceTree = "<group>";
@@ -143,6 +189,13 @@
 			dependencies = (
 			);
 			name = cerradura;
+			packageProductDependencies = (
+				CBFF847D27AA2D5700F43D1D /* FirebaseAnalytics */,
+				CBFF848727AA2D5700F43D1D /* FirebaseAuth */,
+				CBFF848D27AA2D5700F43D1D /* FirebaseDatabase */,
+				CBFF849327AA2D5700F43D1D /* FirebaseFirestore */,
+				CB305C1F27AB582E00F4BB22 /* GoogleSignIn */,
+			);
 			productName = cerradura;
 			productReference = CBFF842B27A9D55F00F43D1D /* cerradura.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +268,10 @@
 				Base,
 			);
 			mainGroup = CBFF842227A9D55F00F43D1D;
+			packageReferences = (
+				CBFF847C27AA2D5700F43D1D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CB305C1E27AB582E00F4BB22 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = CBFF842C27A9D55F00F43D1D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +290,7 @@
 			files = (
 				CBFF843627A9D55F00F43D1D /* Preview Assets.xcassets in Resources */,
 				CBFF843327A9D55F00F43D1D /* Assets.xcassets in Resources */,
+				CBFF847A27AA1C3F00F43D1D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +315,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBFF843127A9D55F00F43D1D /* ContentView.swift in Sources */,
+				CB819A3227B3BC8D0056750C /* Lock.swift in Sources */,
+				CB305C1B27AB3CDC00F4BB22 /* login.swift in Sources */,
+				CB819A3027B3BA890056750C /* RowView.swift in Sources */,
+				CBFF847827AA1A4F00F43D1D /* Cerraduras.swift in Sources */,
+				CB305C2927AB6A7F00F4BB22 /* dataStructure.swift in Sources */,
+				CB819A3427B3C51D0056750C /* lockInfo.swift in Sources */,
+				CB305C1D27AB404D00F4BB22 /* signup.swift in Sources */,
 				CBFF842F27A9D55F00F43D1D /* cerraduraApp.swift in Sources */,
+				CB305C2727AB658600F4BB22 /* data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +486,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"cerradura/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = cerradura/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cerradura Electrónica";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Por favor autentificate para abrir la cerradura.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +517,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"cerradura/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = cerradura/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cerradura Electrónica";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Por favor autentificate para abrir la cerradura.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -579,6 +650,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB305C1E27AB582E00F4BB22 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		CBFF847C27AA2D5700F43D1D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB305C1F27AB582E00F4BB22 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB305C1E27AB582E00F4BB22 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		CBFF847D27AA2D5700F43D1D /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBFF847C27AA2D5700F43D1D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		CBFF848727AA2D5700F43D1D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBFF847C27AA2D5700F43D1D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		CBFF848D27AA2D5700F43D1D /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBFF847C27AA2D5700F43D1D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		CBFF849327AA2D5700F43D1D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBFF847C27AA2D5700F43D1D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CBFF842327A9D55F00F43D1D /* Project object */;
 }
