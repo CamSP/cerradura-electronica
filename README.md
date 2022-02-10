@@ -211,11 +211,11 @@ Combina los caracteres previamente guardados, creando un template nuevo para ser
 * storeTemplate():
 Almacena un templade en una ubicacion dado de las 255 permitidas para este sensor.
 
-Con los anteriores métodos fue posible guardar y verificar las huellas existentes para así utilizar la cerradura, ademas se consideraron diferentes errores, por ejemplo no es posible crear una misma huella dos veces.
+Con los anteriores métodos fue posible guardar y verificar las huellas existentes para así utilizar la cerradura.
 
 ### Main
 Este es el archivo que se ejecuta cuando se inicia la cerradura, primero se establece la frecuencia y el duty cicle para el PWM de los LEDS, luego se inicializa cada uno de ellos y se establece la comunicación con el sensor de huela AS608. Luego se establecen 2 funciones para generar un parpadeo en los LEDs:
-plate()
+
 * blinkLed:
 Realiza un corto blink en el led recibido.
 
@@ -228,7 +228,7 @@ Luego se utiliza la función openLock que abre la cerradura durante 3 segundos. 
 La aplicación fue realizada en Swift para plataformas con IOS y IPadOS (IPhone, IPod, IPad), puesto que este lenguaje, permite de manera sencilla utilizar los sensores biometricos del dispositivo (a diferencia de otros frameworks como react-native). Luego, la app tiene como proposito ser un intermediario entre la cerradura y el usuario, muestra las cerraduras que se encuentran en propiedad de la persona, para ello, utiliza la autentificación por email de Firebase, y posteriormente realiza busquedas en los diferentes documentos de forma que se encuentren coincidencias con el correo del usuario. A partir de esto, es posible abrir la cerradura deseada por medio de la autentificación proporcionada por IOS de FaceID.Se esperaba añadir más funciones como agregar o eliminar usuarios de una cerradura, pero por razones de tiempo no fue posible.
 
 ## Carcasa y construcción
-
+La carcasa se divide en 2 partes, interna y externa, en otras palabras, por dentro y por fuera de la puerta. En la parte interna se encuentra la PCB junto con 4 baterias AA en seríe que suministran energía a la cerradura, estas se cubren con un acrilico para proteger el circuito. La cerradura (el selenoide) se encuentra por fuera de la caja con el fin de que pueda ser ubicada en la posición que el usuario desee, de esta manera no es necesario mover todo el sistema si se quiere cambiar la posición de la cerradura. En la parte externa se encuentran el lector RFID y el sensor de huella AS608. La carcasa fue diseñada en Fusion360 y posteriormente fabricada en impresión 3D en PLA, para ello se utilizó el software CURA como slicer y una Creality Ender 3 V2 como impresora.
 
 
 

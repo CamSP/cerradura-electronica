@@ -34,12 +34,14 @@
 			</div> 
 		</form>
 		<script type="text/javascript">
+			// Se llaman a los elementos del HTML
 			var form = document.getElementById('form')
 			var locname = document.getElementById('name')
 			var email = document.getElementById('email')
 			var ssid = document.getElementById('ssid')
 			var password = document.getElementById('password')
 
+			// Función que se encarga de enviar los datos del formulario
 			function sendData() {
 				if(locname.value!="" && email.value!=""){
 					var data = '{"name":"' + locname.value + '", "email":"' + email.value + '", "ssid":"' + ssid.value + '", "password":"' + password.value+'"}';
@@ -51,6 +53,8 @@
 				}
 			}
 			
+			// Se encarga de escuchar los eventos del servidor, en este caso, 
+			// obtiene los SSIDs de las redes cercanas y crea elementos de HTML para visualizarlos en un drop down
 			if(typeof(EventSource) !== 'undefined') {
 				var ssids = ""
 				console.log(ssid.childElementCount)
