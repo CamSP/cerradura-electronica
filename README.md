@@ -74,7 +74,7 @@ Se utilizaron componentes smd.
 ### ESP32
 
 El controlador esp32 fue utilizado porque facilita la comunicación WiFi y Bluetooth. Además su programación es através de 
-Micropython o el ide de Arduino. Esto hace rápida la programación si existen las librerías paraos sensores.
+Micropython o el ide de Arduino. Esto hace rápida la programación si existen las librerías para los sensores.
 
 ### Etapa de potencia
 * modulo ams1117
