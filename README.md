@@ -190,7 +190,7 @@ Obtiene el UUID de la tarjeta leida.
 Retorna el valor de la tarjeta de configuración.
 
 ### Fingerprint as608
-Para este sensor se utilizaron las librerias pyfingerprint y machine. pyfingerprint tiene todas las instrucciones necesarias para comunicarse con el as608, además tiene  funciones importantes para utilizar el sensor para huella, como su almacenamiento y operación.
+Para este sensor se utilizaron las librerias pyfingerprint y machine. pyfingerprint tiene todas las instrucciones necesarias para comunicarse con el as608, además tiene  funciones importantes para utilizar el sensor para huella, como su almacenamiento y operación. Por otro lado la libreria machine permite configurar la comunicación seria con el esp32.
 La libreria contiene una clase, que es necesaria para identificar el sensor, por lo tanto se debe crear esa clase para utilizar sus métodos y así hacer las lecturas necesarias.
 
 * verifyPasswird():
@@ -238,6 +238,8 @@ A lo largo del desarrollo de la placa para la cerradura electrónica se encontra
 * En el diseño original no se incluyó un transistor BJT conectado al relé, esto ocasionaba un problema ya que no se estaba alimentando al mismo con suficiente corriente, esto se relacionaba con el punto anterior y el problema de distribución de energía; la solución fue conectar un transistor 2n2222 al relé, lo que mostraba su funcionamiento correctamente.
 
 * Existió un error al hacer la conexión de una bobina en el circuito, esta se conectaba directamente a un diodo para lograr su funcionamiento, sin embargo, al hacer la conexión, se puso del lado del incorrecto del diodo, por lo que al probar el circuito, esta sección no respondía. La solución a esto fue sencilla, en este caso rearreglar las conexiones de los terminales en la bobina y el diodo para ubicarlos en el lado correcto solucionó el problema y se logró que la sección funcionara. 
+
+* Respecto al sensor para huella as608 aunque la libreria pyfingerprint permite utilizarlp correctamente, hay que configurar su comunicación de recepción y transmisión de datos, la velocidad en baudios, los bit que se van a leer por lectura y los pines que se deben usar. La velocidad y los bits utilizados en la transmisión se puede encontrar en el datasheet y debe ser los que se indican, de lo controario no trabajaria correctamente.
 
 
 
