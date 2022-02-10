@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+	<title>Lock Configuration</title>
+	<link rel="stylesheet" href="style.css" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+	<body>
+		
+		<form id="form">
+			<div id="title">
+				<h1 id="config-title">Bienvenido al proceso de configuración de tu cerradura electrónica</h1>
+			</div>	
+			<div class="field"> 
+				<h2>Elige un nombre para tu cerradura electrónica</h2>
+				<input type="text" name="text" id="name" required>
+			</div>
+			<div class="field"> 
+				<h2>Escribe tu email</h2>
+				<input type="email" name="email" id="email" required>
+			</div> 
+			<div class="field"> 
+				<h2>Escoge la red a la que te quieres conectar</h2>
+				<select name="ssids" id="ssid">	
+				</select>
+			</div> 
+			<div class="field"> 
+				<h2>Ingresa la contraseña (Si no tiene, dejala en blanco)</h2> 
+				<input type="password" name="password" id="password">
+			</div> 
+			<div id="submit-div"> 
+				<input type="submit" value="Listo!" id="submit" onClick="sendData()" >
+			</div> 
+		</form>
+		<script type="text/javascript">
+			var form = document.getElementById('form')
+			var locname = document.getElementById('name')
+			var email = document.getElementById('email')
+			var ssid = document.getElementById('ssid')
+			var password = document.getElementById('password')
+
+			function sendData() {
+				if(locname.value!="" && email.value!=""){
+					var data = '{"name":"' + locname.value + '", "email":"' + email.value + '", "ssid":"' + ssid.value + '", "password":"' + password.value+'"}';
+					var xhttp = new XMLHttpRequest();
+					xhttp.open('POST', 'http://' + window.location.hostname + '/data', true);
+					xhttp.setRequestHeader('Content-type', 'application/json');
+					xhttp.send(data);
+					window.close();
+				}
+			}
+			
+			if(typeof(EventSource) !== 'undefined') {
+				var ssids = ""
+				console.log(ssid.childElementCount)
+				const source = new EventSource('http://' + window.location.hostname + '/data');
+				source.onmessage = function(e) {
+					if(ssid.childElementCount == 0){
+						ssids = JSON.parse(e.data.replaceAll("'", '"'))
+						for (const property in Object.keys(ssids)) {
+							var option = document.createElement('option')
+							option.value = ssids[property]
+							option.innerHTML = ssids[property];
+							ssid.appendChild(option)
+						}
+					}
+				};
+			} else {
+				document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
+			}
+			
+
+		</script>
+	</body>
+</html>
