@@ -19,7 +19,7 @@ El elemento diferencial de nuestro producto a los demás sistemas que se encuent
 * La lectura de huella dactilar y el reconocimiento facial puede realizarse por medio de la aplicación móvil.
 * En caso de que haya un corte en la energía, el sistema seguirá funcionando con baterias.
 
-![alt text](/images/Diagrama de bloques.png)
+![alt text](/images/bloques.png)
 
 ## Requerimientos no funcionales
 * Debido al uso de la cerradura electrónica, la cerradura mecánica convencional no es necesaria, sin embargo, en caso de que el cliente lo desee, se pueden usar en conjunto.
