@@ -142,7 +142,7 @@ Con esto en mente, se utilizan las siguientes funciones:
 
 * __init__:
 
-El constructor inicializa ambos modos de WiFi, es decir, como una estación o como un punto de acceso, luego lee el JSON, si el valor de UUID es nulo, genera uno nuevo y posteriormente reviza el parametro config, si este ensta en True llama a la función connect y establece la conexión con el WiFi. En caso de que config este en False, scannea los SSID's cercanos e inicializa el webserver.
+El constructor inicializa ambos modos de WiFi, es decir, como una estación o como un punto de acceso, luego lee el JSON, si el valor de UUID es nulo, genera uno nuevo y posteriormente reviza el parametro config, si este esta en True llama a la función connect y establece la conexión con el WiFi. En caso de que config este en False, scannea los SSID's cercanos e inicializa el webserver.
 
 * scan:
 
