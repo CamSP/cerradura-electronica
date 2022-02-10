@@ -155,7 +155,7 @@ Esta función se encarga de establecer la conexión con el WiFi, recibe un SSID 
 Se encarga de envíar la lista de los SSID's al webserver.
 
 * _httpHandlerDataPost:
-Recibe los datos del formulario alojado en el webserver, una vez obtendos llama a la función connect, y si esta retorna True, guarda los valores del formulario en el JSON. Finalmente reinicia el sistema.
+Recibe los datos del formulario alojado en el webserver, una vez obtenidos llama a la función connect, y si esta retorna True, guarda los valores del formulario en el JSON. Finalmente reinicia el sistema.
 
 * runServer:
 Activa el WiFi en modo access point, utiliza las 2 funciones anteriores como route handlers e inicializa el servidos con los archivos de HTML, CSS y JS contenidos en la carpeta /www. Finalmente, inicia el servidor.
