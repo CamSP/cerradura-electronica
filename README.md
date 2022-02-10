@@ -189,11 +189,32 @@ Obtiene el UUID de la tarjeta leida.
 * getSecretCard:
 Retorna el valor de la tarjeta de configuración.
 
+###Fingerprint as608
+Para este sensor se utilizaron las librerias pyfingerprint y machine. pyfingerprint tiene todos las instrucciones necesarias para comunicarse con el as608, además tiene tiene funciones importantes para utilizar el sensor de huella, como su almacenamiento y operación.
+La libreria contiene una clase, que es necesaria para identificar el sensor, por lo tanto se debe crear esa clase para utilizar sus métodos y así hacer las lecturas necesarias.
 
+*verifyPasswird():
+Nos permite acceder al sensor mediante su contraseña, usualmente se utiliza la constraseña de fabrica. Esto se utiliza para saber si esta conectado el sensor.
+*getTemplateCount():
+Este metodo nos permite saber el numero de almacenamiento de las huellas.
+*getStorageCapacity():
+Este método nos da información de la capacidad de almacenamiento de una huella dada.
+*readImage():
+Este metodo simplemente lee lo que este en la superficie del sensor.
+*searchTemplate():
+Este metodo busca coincidencias de una huella leida con las huellas guardades.
+*convertImage():
+Convierte la imagen leida en un sistema de almacenamiento diferente para ser guardado.
+*createTemplate():
+Combina los caracteres previamente guardados, creando un template nuevo para ser almacenado. 
+*storeTemplate():
+Almacena un templade en una ubicacion dado de las 255 permitidas para este sensor.
+
+Con los anteriores métodos fue posible guardar y verificar las huellas existentes para así utilizar la cerradura, ademas se consideraron diferentes errores, por ejemplo no es posible crear una misma huella dos veces.
 
 ### Main
 Este es el archivo que se ejecuta cuando se inicia la cerradura, primero se establece la frecuencia y el duty cicle para el PWM de los LEDS, luego se inicializa cada uno de ellos y se establece la comunicación con el sensor de huela AS608. Luego se establecen 2 funciones para generar un parpadeo en los LEDs:
-
+plate()
 * blinkLed:
 Realiza un corto blink en el led recibido.
 
