@@ -161,6 +161,8 @@ Recibe los datos del formulario alojado en el webserver, una vez obtenidos llama
 * runServer:
 Activa el WiFi en modo access point, utiliza las 2 funciones anteriores como route handlers e inicializa el servidos con los archivos de HTML, CSS y JS contenidos en la carpeta /www. Finalmente, inicia el servidor.
 
+![alt text](/images/config.jpeg)
+
 * stopServer:
 Detiene el servidor.
 
@@ -226,6 +228,11 @@ Luego se utiliza la función openLock que abre la cerradura durante 3 segundos. 
 
 ### Aplicación (IOS)
 La aplicación fue realizada en Swift para plataformas con IOS y IPadOS (IPhone, IPod, IPad), puesto que este lenguaje, permite de manera sencilla utilizar los sensores biometricos del dispositivo (a diferencia de otros frameworks como react-native). Luego, la app tiene como proposito ser un intermediario entre la cerradura y el usuario, muestra las cerraduras que se encuentran en propiedad de la persona, para ello, utiliza la autentificación por email de Firebase, y posteriormente realiza busquedas en los diferentes documentos de forma que se encuentren coincidencias con el correo del usuario. A partir de esto, es posible abrir la cerradura deseada por medio de la autentificación proporcionada por IOS de FaceID.Se esperaba añadir más funciones como agregar o eliminar usuarios de una cerradura, pero por razones de tiempo no fue posible.
+
+![alt text](/images/login.jpeg)
+![alt text](/images/cerraduras.jpeg)
+![alt text](/images/info.jpeg)
+![alt text](/images/faceid.jpeg)
 
 ## Carcasa y construcción
 La carcasa se divide en 2 partes, interna y externa, en otras palabras, por dentro y por fuera de la puerta. En la parte interna se encuentra la PCB junto con 4 baterias AA en seríe que suministran energía a la cerradura, estas se cubren con un acrilico para proteger el circuito. La cerradura (el selenoide) se encuentra por fuera de la caja con el fin de que pueda ser ubicada en la posición que el usuario desee, de esta manera no es necesario mover todo el sistema si se quiere cambiar la posición de la cerradura. En la parte externa se encuentran el lector RFID y el sensor de huella AS608. La carcasa fue diseñada en Fusion360 y posteriormente fabricada en impresión 3D en PLA, para ello se utilizó el software CURA como slicer y una Creality Ender 3 V2 como impresora.
